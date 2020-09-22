@@ -1,0 +1,118 @@
+/* Mediaqueries */
+
+/* Mobile first design */
+
+:root { /* El root te indica que eso se va ejecutar primero (pongas dónde lo pongas) */
+    --background-link-color: rgb(141, 210, 241);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.img-header {
+    border: 2px solid cornflowerblue;
+    width: 100%;
+}
+
+.navigation-bar__items {
+    text-align: center;
+    padding: 0.2rem;
+    margin: 0; /* Sacar el margen respecto al logo (hermano) */
+    background-color: var(--background-link-color); /* Toma el background color de la variable del root */
+}
+
+.navigation-bar__item {
+    font-size: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 0.5rem; /* Margenes entre los links*/
+    border: 1px solid cornflowerblue;
+    width: 80%;
+    text-align: center;
+    list-style: none; /* Eliminar punto negro de la izquierda de las listas */
+    margin-left: 2rem;
+}
+
+.navigation-bar__items a {
+    text-decoration: none;
+    color: black;
+}
+
+section {
+    border: 2px solid cornflowerblue;
+    margin-top: 0.2rem;
+    padding: 0.5rem;
+}
+
+.introduccion {
+    padding: 1.2rem;
+}
+
+article {
+    border: 2px solid blue;
+    margin: 1rem;
+    padding: 0.5rem;
+    width: 90%;
+}
+
+article img {
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* TABLETS */
+@media  (min-width: 551px) and (max-width: 800px){
+    .navigation-bar__items {
+        text-align: left;
+        padding: 0;
+    }     
+    .navigation-bar__item {
+        display: inline;
+        border: none;
+        font-size: 0.8rem;
+        width: 14%;
+        margin-left: 0.7rem;
+    }
+    article {
+        margin: 5rem;
+        width: 75%;
+    }
+    article img {
+        width: 50%;
+    }
+    article span {
+        width: 50%;
+        float: right;
+        padding-left: 0.5rem;
+    }
+}
+
+/* ORDENADORS */
+@media  (min-width: 801px){
+    .navigation-bar__items {
+        text-align: left;
+    }     
+    .navigation-bar__item {
+        display: inline;
+        border: none;
+        font-size: 0.9rem;
+        margin-left: 1.5rem;
+    }
+    .sections {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    article {
+        width: 45%;
+        margin: 1em;
+    }
+    article img {
+        width: 50%;
+    }
+    article span {
+        width: 50%;
+        float: right;
+        padding-left: 0.5rem;
+    }
+}
